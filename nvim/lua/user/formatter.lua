@@ -20,10 +20,12 @@ formatter.setup({
 		c = { clang_format() },
 		go = { require("formatter.filetypes.go").gofmt },
 		python = { require("formatter.filetypes.python").black },
+		markdown = { require("formatter.filetypes.markdown").prettier },
 		rust = { require("formatter.filetypes.rust").rustfmt },
 		javascript = { require("formatter.filetypes.javascript").prettier },
 		javascriptreact = { require("formatter.filetypes.javascriptreact").prettier },
 		typescript = { require("formatter.filetypes.typescript").prettier },
 		typescriptreact = { require("formatter.filetypes.typescriptreact").prettier },
+		html = { require("formatter.filetypes.html").prettier },
 	},
 })

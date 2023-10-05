@@ -15,6 +15,15 @@ if test -d ~/.cargo/bin/
     set -gx PATH ~/.cargo/bin $PATH
 end
 
+# If ~/go exists, add it to path
+if test -d ~/go
+    set -gx GOPATH ~/go
+    # If ~/go/bin exists, add it to path
+    if test -d ~/go/bin
+        set -gx PATH ~/go/bin/ $PATH
+    end
+end
+
 # Add C++ headers files installed from homebrew
 # brew install boost
 if ls $(brew --prefix) | grep "include" > /dev/null
@@ -23,7 +32,7 @@ end
 
 # fisher install PatrickF1/fzf.fish
 if cat $__fish_config_dir/fish_plugins | grep fzf.fish > /dev/null
-    set -gx fzf_preview_dir_cmd exa --all --icons --color=always
+    set -gx fzf_preview_dir_cmd eza --all --color=always
 end
 
 # Check if starship exist
@@ -31,7 +40,6 @@ end
 #     set -gx STARSHIP_CONFIG ~/.dotfiles/starship/starship.toml
 #     starship init fish | source
 # end
-
 
 # If oh-my-posh exists, use it as shell prompt. 
 if type -q oh-my-posh
