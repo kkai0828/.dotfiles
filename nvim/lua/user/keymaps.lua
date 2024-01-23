@@ -40,7 +40,7 @@ keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Move text up and down 
-keymap("n", "-", "<Esc>:m .-2<CR>==", opts) -- Up
+keymap("n", "-", "<Esc>:m .-1<CR>==", opts) -- Up
 keymap("n", "_", "<Esc>:m .+1<CR>==", opts) -- Down
 
 -- Hopping 

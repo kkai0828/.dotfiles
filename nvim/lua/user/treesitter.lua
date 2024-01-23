@@ -12,7 +12,7 @@ local autotag_filetypes = {
     'xml',
     'php',
     'markdown',
-    'glimmer','handlebars','hbs'
+    'glimmer','handlebars','hbs','c'
 }
 
 configs.setup {

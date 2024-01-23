@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 sili.setup({
-    --[[ output = '/Users/chenchaoting/Desktop/', ]]
+    --[[ output = '/Users/KaiXuan/Desktop/', ]]
     theme = 'Dracula',
     background = '#eff',
     shadow = {

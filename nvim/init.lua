@@ -42,4 +42,8 @@ vim.cmd([[
     if $TERM_PROGRAM == "Apple_Terminal"
     set notermguicolors
     endif
+    augroup cpp_templates
+        autocmd!
+        autocmd BufNewFile *.cc 0r ~/.config/nvim/templates/cpp_template.cpp
+    augroup END
 ]])
